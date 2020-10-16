@@ -6,7 +6,9 @@
 import scrapy
 
 
-class ScrapyspiderItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class Switch(scrapy.Item):
+    name = scrapy.Field()
+    url = scrapy.Field()
+    content = scrapy.Field()
+    content1 = scrapy.Field()
+    sql=scrapy.Field()

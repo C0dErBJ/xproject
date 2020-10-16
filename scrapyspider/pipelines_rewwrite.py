@@ -10,10 +10,9 @@ import pymysql
 
 db = pymysql.connect("localhost", "root", "12345678aA!", "test")
 
-class ScrapyspiderPipeline:
+class WritePipeline:
     def process_item(self, item, spider):
         cursor=db.cursor()
         cursor.execute(item['sql'])
         db.commit()
         return item
-
